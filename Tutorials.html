@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorials — VolleyPlayers Academy</title>
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="logo png circle.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --accent: #ff6b35; --dark: #0f1724; --muted: #6b7280; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #fffaf5 0%, #f4f6ff 100%);
+      font-family: "Poppins", sans-serif;
+      color: var(--dark);
+    }
+    header.site-header {
+      background: linear-gradient(135deg, #ff6b35, #ff945c);
+      color: white;
+      padding: 10px 18px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .brand-badge { display: flex; align-items: center; gap: 10px; }
+    .brand-badge img { height: 45px; border-radius: 50%; }
+    .site-title { font-weight: 700; font-size: 1.3rem; }
+    nav a {
+      color: white; text-decoration: none; margin-left: 14px;
+      font-weight: 600; transition: 0.3s;
+    }
+    nav a:hover { opacity: 0.8; }
+
+    .page-header { text-align: center; padding: 50px 20px 30px; }
+    .page-header h1 {
+      font-family: "Oswald", sans-serif; color: var(--accent);
+      font-size: 2.2rem; margin-bottom: 8px;
+    }
+    .page-header p { color: var(--muted); font-size: 1.1rem; max-width: 700px; margin: auto; }
+
+    .video-grid {
+      max-width: 1100px; margin: auto; padding: 20px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;
+    }
+    .video-card {
+      background: white; border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      overflow: hidden; transition: 0.3s;
+    }
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(255,107,53,0.25);
+    }
+    .video-card iframe {
+      width: 100%; height: 200px; border: none;
+    }
+    .video-card .info { padding: 14px 16px; }
+    .video-card h3 {
+      margin: 6px 0; font-size: 1.1rem; color: var(--dark); font-weight: 600;
+    }
+    .video-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+    footer {
+      background: #fff; padding: 20px; text-align: center;
+      font-size: 14px; color: var(--muted); margin-top: 60px;
+    }
+    @media (max-width: 600px) {
+      nav { display: flex; flex-wrap: wrap; justify-content: center; }
+      nav a { margin: 4px 6px; }
+      .video-card iframe { height: 180px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-badge">
+        <img src="logo png circle.png" alt="logo">
+        <div class="site-title">VolleyPlayers Academy</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="formhtml.html">Enroll</a>
+        <a href="#Tutorials">Tutorials</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <h1>Volleyball Tutorials</h1>
+    <p>Learn every skill — from basic techniques to advanced plays — through easy-to-follow videos.</p>
+  </div>
+
+  <div class="video-grid">
+    <div class="video-card">
+      <iframe title="Serving Techniques" src="https://www.youtube.com/embed/_3TnIuZ9R6A" allowfullscreen></iframe>
+      <div class="info">
+        <h3>Serving Techniques</h3>
+        <p>Master underhand, overhand, and jump serves — with professional form and power.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <iframe title="Passing (Forearm Pass)" src="https://www.youtube.com/embed/MDk2GgAEGzM" allowfullscreen></iframe>
+      <div class="info">
+        <h3>Passing (Forearm Pass)</h3>
+        <p>Learn how to control the ball with precision and proper foot positioning during passes.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <iframe title="Setting Skills" src="https://www.youtube.com/embed/6lU9V4DJZCM" allowfullscreen></iframe>
+      <div class="info">
+        <h3>Setting Skills</h3>
+        <p>Improve hand placement, timing, and soft touches to deliver perfect sets for your spikers.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <iframe title="Spiking Techniques" src="https://www.youtube.com/embed/BY3whi4sD5g" allowfullscreen></iframe>
+      <div class="info">
+        <h3>Spiking Techniques</h3>
+        <p>Discover the art of jumping, timing, and hitting angles to become a powerful attacker.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <iframe title="Blocking Skills" src="https://www.youtube.com/embed/HYo1v9oJceE" allowfullscreen></iframe>
+      <div class="info">
+        <h3>Blocking Skills</h3>
+        <p>Defend your court with proper hand positioning and anticipation at the net.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <iframe title="Digging Defense" src="https://www.youtube.com/embed/2BzZcFKG6co" allowfullscreen></iframe>
+      <div class="info">
+        <h3>Digging Defense</h3>
+        <p>React fast and control low balls with advanced digging form and awareness drills.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <iframe title="Rotation & Positioning" src="https://www.youtube.com/embed/3p2EccVwaOU" allowfullscreen></iframe>
+      <div class="info">
+        <h3>Rotation & Positioning</h3>
+        <p>Understand rotation rules and positioning to keep your team synchronized during play.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 <strong>VolleyPlayers Academy</strong> | Made by <strong>Gagan Deep Singh & Team</strong>
+  </footer>
+</body>
+</html>
