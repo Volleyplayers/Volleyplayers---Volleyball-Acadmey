@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VolleyPlayers — Enroll Now</title>
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="logo png circle.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #ff6b35;
+      --dark: #0f1724;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --glass: rgba(255,255,255,0.2);
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #fff5ef 0%, #f3f6ff 100%);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header.site-header {
+      background: linear-gradient(135deg, var(--accent), #ff8f5a);
+      color: white;
+      padding: 16px 20px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .brand-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-badge img {
+      height: 50px;
+      border-radius: 8px;
+    }
+
+    .site-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: var(--dark);
+      font-family: "Oswald", sans-serif;
+      font-size: 2rem;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #ff6b35, #ffb58a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 5px #ff6b35; }
+      50% { text-shadow: 0 0 15px #ff6b35; }
+    }
+
+    /* FORM BOX */
+    form {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 30px;
+      border-radius: 14px;
+      max-width: 550px;
+      margin: 30px auto 40px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+    }
+
+    form::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      padding: 2px;
+      background: linear-gradient(135deg, var(--accent), #ffb58a);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-top: 12px;
+      color: var(--dark);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s;
+      background-color: #fff;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 5px rgba(255,107,53,0.4);
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255,107,53,0.3);
+    }
+
+    button:hover {
+      background: #ff844d;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 20px;
+      margin-top: auto;
+      background: #fafafa;
+    }
+
+    /* ✅ Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background: #25D366;
+      border-radius: 50%;
+      padding: 14px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    /* 🌈 Responsive */
+    @media (max-width: 600px) {
+      header.site-header { text-align: center; }
+      nav { margin-top: 10px; }
+      form { margin: 20px 15px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-badge">
+        <img src="logo png circle.png" alt="logo">
+        <div class="site-title">VolleyPlayers Academy</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="tutorials.html">Tutorials</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <h1>ENROLL NOW</h1>
+
+  <!-- 📝 REGISTRATION FORM -->
+  <form action="https://formspree.io/f/xpwogbyy" method="POST">
+    <h2 style="text-align:center;color:var(--accent);margin-bottom:10px;">Registration Form</h2>
+
+    <label>Full Name</label>
+    <input type="text" name="NAME" placeholder="Enter your full name" required>
+
+    <label>Email Address</label>
+    <input type="email" name="EMAIL" placeholder="example@email.com" required>
+
+    <label>Phone Number</label>
+    <input type="text" name="PHONE" inputmode="numeric" pattern="^[0-9]{10}$" maxlength="10" required 
+           oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
+           placeholder="Enter 10-digit phone number">
+
+    <label>Joining Purpose</label>
+    <select name="Joining Purpose" required>
+      <option value="">-- Select Purpose --</option>
+      <option>Friendly Matches (for fun/practice)</option>
+      <option>Intra-Academy Competitions</option>
+      <option>Inter-School / Inter-College Matches</option>
+      <option>District-Level Tournaments</option>
+      <option>State-Level Championships</option>
+      <option>National-Level Competitions</option>
+    </select>
+
+    <label>Address</label>
+    <textarea name="ADDRESS" rows="3" placeholder="Enter your full address" required></textarea>
+
+    <button type="submit">Submit Registration</button>
+  </form>
+
+  <!-- ✅ WhatsApp Support -->
+  <a href="https://wa.me/918890219508" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <footer>
+    © <strong>VolleyPlayers</strong> — Volleyball Academy | Made by <strong>Gagan Deep Singh & Team</strong>
+  </footer>
+</body>
+</html>
