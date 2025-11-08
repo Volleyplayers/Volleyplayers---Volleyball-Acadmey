@@ -1,0 +1,372 @@
+:root {
+  --accent: #ff6b35;
+  --dark: #0f1724;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --glass: rgba(255, 255, 255, 0.06);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Basic resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #f7fafc 0%, #eef2f7 100%);
+  color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+/* ------------- HEADER ------------- */
+header.site-header {
+  background: linear-gradient(135deg, var(--accent), #ff9a60);
+  color: white;
+  padding: 20px 18px;
+  box-shadow: 0 6px 20px rgba(21, 32, 43, 0.12);
+  position: relative;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+.brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-badge .initials {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* ------------- MAIN CONTENT ------------- */
+main {
+  max-width: 1100px;
+  margin: 40px auto 60px;
+  padding: 0 18px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 18px;
+  align-items: start;
+}
+
+.hero h2 {
+  margin: 8px 0 12px;
+  font-size: 1.4rem;
+}
+
+.hero p {
+  color: var(--muted);
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chip {
+  background: var(--glass);
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.schedule {
+  margin-top: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px 6px;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+}
+
+/* ----------- CONTACT & ASIDE ----------- */
+aside .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact a {
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.map iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  border: 0;
+}
+
+footer {
+  max-width: 1100px;
+  margin: 24px auto 60px;
+  padding: 0 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ------------- BUTTON ------------- */
+.btn {
+  background-color: #ff6b35;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(255, 107, 53, 0.3);
+}
+
+.btn:hover {
+  background-color: #ff824f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(255, 107, 53, 0.5);
+}
+
+/* ----------- SOCIAL ICONS ----------- */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 107, 53, 0.5);
+}
+
+/* ----------- FORM ----------- */
+form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  background-color: #ff6b35;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e25b2e;
+  box-shadow: 0 0 10px rgba(255, 107, 53, 0.8);
+  transform: scale(1.05);
+}
+
+/* ----------- PAGE FADE EFFECT ----------- */
+body.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-in-active {
+  opacity: 1;
+}
+
+/* ----------- RESPONSIVE ADJUSTMENTS ----------- */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header.site-header {
+    text-align: center;
+  }
+  .header-inner {
+    align-items: center;
+  }
+  nav a {
+    margin: 0 10px;
+    font-size: 0.95rem;
+  }
+  .features {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.2rem;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    margin: 5px 0;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  table th, table td {
+    font-size: 0.85rem;
+  }
+}
+/* 🌟 CONTACT BOX STYLING */
+.contact-box {
+  background: linear-gradient(135deg, rgba(255,107,53,0.05), rgba(255,107,53,0.03));
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  border-left: 4px solid #ff6b35;
+}
+
+.contact-box h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #ff6b35;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-weight: 600;
+  color: #0f1724;
+  margin-bottom: 3px;
+}
+
+.contact-link {
+  color: #0f1724;
+  text-decoration: none;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  background: #ff6b35;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255,107,53,0.4);
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 768px) {
+  .contact-box {
+    text-align: center;
+  }
+  .contact-item {
+    align-items: center;
+  }
+}
